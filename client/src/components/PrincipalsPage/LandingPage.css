@@ -1,0 +1,75 @@
+#video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .hero {
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .hero .content {
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 40vh;
+  }
+  
+  .hero .content h1 {
+    font-size: 4rem;
+    color: #fff;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    color: #fff;
+  }
+  
+  .hero .btn-landing {
+    margin: 1rem .2rem;
+  }
+  
+  @media screen and (max-width:640px) {
+    .content h1 {
+        font-size: 3rem;
+    }
+  
+    .content p {
+        font-size: 1.4rem;
+        margin-bottom: 1.6rem;
+    }
+  }
+  
+  .btn-landing {
+    background-color: transparent !important;
+    border: 1px solid #f7f4f4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #f3eded;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+  }

@@ -1,0 +1,15 @@
+.activity-card{
+    height: 10rem;
+    background-color: #a9c25d;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0.3rem;
+    display: flex;
+    justify-content: center;
+    min-width: 20%;
+}
+.activity-card p{
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+

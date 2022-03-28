@@ -1,0 +1,31 @@
+.card{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    border-color: #0A201B;
+    background-color: #f5eec2;
+    padding: 10px 40px 10px 40px;
+    align-items: center;
+    border: 2px solid #416a59;
+    border-radius: 20px;
+}
+
+.country-image{
+    border-radius: 10px;
+    align-items: center;
+    flex: center;
+}
+
+.card:hover{
+    opacity: 0.8;
+    background-color: #a9c25d;
+    color: #fff;
+    outline: none;
+    border: 2px solid #416a59;
+    box-shadow: 0 0 10px #416a59;
+    border-radius: 20px;
+}
