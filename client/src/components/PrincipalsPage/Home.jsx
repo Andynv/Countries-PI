@@ -113,7 +113,7 @@ function Home(){
                                     {/* ORDER BY CONTINENT */}
             <select onChange={e => handleContinentFilter(e)} className='continent-order'>
                 {/* filtrar por continente y por tipo de actividad turística */}
-                <option value="All">Order by continent</option>
+                <option value="All">Filter by continent</option>
                 <option value="Africa">Africa</option>
                 <option value="North America">America del Norte</option>
                 <option value="South America">America del Sur</option>

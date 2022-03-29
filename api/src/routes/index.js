@@ -30,11 +30,10 @@ const getDbInfo = async () => {//trae toda la informacion almacenada ne la DB
             attributes: ['name', 'difficulty', 'duration', 'season'],
             through: {
                 attributes: []
-            }
-        }
-    })
-}
-
+            },
+        },
+    });
+};
 
 router.get('/countries', async(req, res) => {
     let { name } = req.query
