@@ -22,9 +22,9 @@ function SearchBar() {
   return (
       <div>
       <input
-        className='search-input' type="text" placeholder="Buscar pais..." value={name} onChange={e => handleInputChange(e)}
+        className='search-input' type="text" placeholder="Search" value={name} onChange={e => handleInputChange(e)}
       />
-      <button className='search-button' type="submit" onClick={e => handleClick(e)}>Buscar</button>
+      <button className='search-button' type="submit" onClick={e => handleClick(e)}>Let's go</button>
       </div>
   );
 };
