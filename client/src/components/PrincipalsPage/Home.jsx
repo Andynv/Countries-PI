@@ -81,11 +81,11 @@ function Home(){
                 <SearchBar />
                 </div>
                 <div className='first-text'>
-            <h1>Países del mundo</h1>
+            <h1>Countries</h1>
             </div>
                 <div>
                     <Link to='/activity/create'>
-                        <button className='create'>Crear Actividad</button>
+                        <button className='create'>Create Activity</button>
                     </Link>
                 </div>
             </div>
@@ -96,9 +96,9 @@ function Home(){
             <select onChange={e => handleSortingName(e)} className='name-order'>
                 {/** Deben ser filtrados ascendente y descendente por orden alfabetico y por cantidad de poblacion
                  */}
-                <option vale='All'>Ordenar por nombre</option> 
-                <option value="asc">Ascendente</option>
-                <option value="desc">Descendente</option>
+                <option vale='All'>Order by name</option> 
+                <option value="asc">Ascendent</option>
+                <option value="desc">Descendent</option>
             </select>
             </div>
             <div>
