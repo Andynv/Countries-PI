@@ -113,8 +113,8 @@ function Home(){
                                              {/* ORDER BY POPULATION */}
             <select onChange={e => handleSortingPopulation(e)} className='population-order'>
                  <option value='All'>Ordenar por Población</option>
-                 <option value='asc'>Mayor Población</option>
-                 <option value='desc'>Menor Población</option>
+                 <option value='asc'>Menor Población</option>
+                 <option value='desc'>Mayor Población</option>
             </select>
             </div>
             <div>
