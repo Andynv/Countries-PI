@@ -10,10 +10,11 @@ const LandingPage = () => {
                 <source src={travelVideo} type='video/mp4' />
             </video>
             <div className='content'>
-                <h1>Discover. Travel.</h1>
+                <h1>Descubre todos los países del mundo </h1>
+                <p>Countries App es una aplicación destinada a mostrarte información de diferentes partes del mundo</p>
                 <div>
                     <Link to='/home'>
-                    <button className='btn-landing'>Welcome</button>
+                    <button className='btn-landing'>Bienvenido</button>
                     </Link>
                 </div>
             </div>

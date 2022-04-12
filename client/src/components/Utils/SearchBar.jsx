@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { useDispatch } from "react-redux";
 import { findCountry } from "../../actions";
+import { GoSearch } from "react-icons/go";
 import './SearchBar.css'
 
 function SearchBar() {
@@ -22,9 +23,9 @@ function SearchBar() {
   return (
       <div>
       <input
-        className='search-input' type="text" placeholder="Search" value={name} onChange={e => handleInputChange(e)}
+        className='search-input' type="text" placeholder="Buscar pais..." value={name} onChange={e => handleInputChange(e)}
       />
-      <button className='search-button' type="submit" onClick={e => handleClick(e)}>Let's go</button>
+      <button className='search-button' type="submit" onClick={e => handleClick(e)}><GoSearch /> </button>
       </div>
   );
 };

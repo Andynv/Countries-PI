@@ -41,12 +41,6 @@ function Home(){
     }, [dispatch])
 
 
-    const handleClick = (e) => {
-       e.preventDefault();
-       dispatch(getAllCountries())
-       setCurrentPage(1);
-    };
-
     const handleSortingName = (e) => {
         e.preventDefault();
         dispatch(sortByName(e.target.value))
@@ -85,57 +79,53 @@ function Home(){
             </div>
                 <div>
                     <Link to='/activity/create'>
-                        <button className='create'>Create Activity</button>
+                        <button className='create'>Crear actividad</button>
                     </Link>
                 </div>
             </div>
                                                 {/* FILTROS */}
         <div className='filter-container'>
+        <div>
+                                    {/* ORDER BY CONTINENT */}
+            <select onChange={e => handleContinentFilter(e)} className='continent-order'>
+                {/* filtrar por continente y por tipo de actividad turística */}
+                <option value="All">Continentes</option>
+                <option value="Africa">África</option>
+                <option value="North America">America del Norte</option>
+                <option value="South America">America del Sur</option>
+                <option value="Antarctica">Antártida</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceanía</option>
+            </select>
+            </div>
             <div>
                                               {/* ORDER BY NAME */}
             <select onChange={e => handleSortingName(e)} className='name-order'>
                 {/** Deben ser filtrados ascendente y descendente por orden alfabetico y por cantidad de poblacion
                  */}
-                <option vale='All'>Order by name</option> 
-                <option value="asc">Ascendent</option>
-                <option value="desc">Descendent</option>
+                <option vale='All'>Ordenar por nombre</option> 
+                <option value="asc">A - Z</option>
+                <option value="desc">Z - A</option>
             </select>
             </div>
             <div>
                                              {/* ORDER BY POPULATION */}
             <select onChange={e => handleSortingPopulation(e)} className='population-order'>
-                 <option value='All'>Order by population</option>
-                 <option value='asc'>Ascendent</option>
-                 <option value='desc'>Descendent</option>
-            </select>
-            </div>
-            <div>
-                                    {/* ORDER BY CONTINENT */}
-            <select onChange={e => handleContinentFilter(e)} className='continent-order'>
-                {/* filtrar por continente y por tipo de actividad turística */}
-                <option value="All">Filter by continent</option>
-                <option value="Africa">Africa</option>
-                <option value="North America">America del Norte</option>
-                <option value="South America">America del Sur</option>
-                <option value="Antarctica">Antartica</option>
-                <option value="Asia">Asia</option>
-                <option value="Europe">Europa</option>
-                <option value="Oceania">Oceania</option>
+                 <option value='All'>Ordenar por Población</option>
+                 <option value='asc'>Mayor Población</option>
+                 <option value='desc'>Menor Población</option>
             </select>
             </div>
             <div>
                                 {/* ORDER BY ACTIVITIES */}
             <select onChange={e => handleFilterActivity(e)} className='activities-order'>
-                <option value="All">Activities</option>
+                <option value="All">Actividades</option>
                 { allActivities && allActivities.map(activity => (
                     <option value={activity.name}>{activity.name}</option>
                 ))}
             </select>
             </div>
-            <div>
-                                        {/* REFRESH PAGE */}
-            <button className='refresh' onClick={event => handleClick(event)}>Refresh</button>
-                </div>
             </div>
             <hr className='line' />
             <Paginado 
